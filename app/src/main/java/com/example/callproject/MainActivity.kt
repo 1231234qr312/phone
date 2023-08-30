@@ -13,7 +13,7 @@ class MainActivity : AppCompatActivity() {
     }
     lateinit var binding:ActivityMainBinding
     val Tag:String="로그"
-    var modelList=ArrayList<MyItem>()
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding=ActivityMainBinding.inflate(layoutInflater)
@@ -30,8 +30,6 @@ class MainActivity : AppCompatActivity() {
         dataList.add(MyItem(R.drawable.face9,"이름9","010-1234-4561"))
         dataList.add(MyItem(R.drawable.face10,"이름10","010-1234-4561"))
 
-
-        binding.recyclerview.adapter = adapter
 
 
         binding.recyclerview.adapter = adapter

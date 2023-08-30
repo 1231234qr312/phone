@@ -4,7 +4,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.example.callproject.databinding.CheckboxBinding
+
 import com.example.callproject.databinding.CheckeditemBinding
 import com.example.callproject.databinding.LayoutRecyclerviewItemBinding
 
@@ -30,14 +30,15 @@ class MyAdapter(val mItems: MutableList<MyItem>,val Onclik:(MyItem)->Unit) : Rec
             Onclik(item)
         }
 
+
         if(holder is Holder){
             holder.name.text=item.name
-            holder.number.text=item.name
+            holder.number.text=item.number
             holder.profileImage.setImageResource(item.profile)
         }
         else if (holder is Holder2){
             holder.name.text=item.name
-            holder.number.text=item.name
+            holder.number.text=item.number
             holder.profileImage.setImageResource(item.profile)
         }
     }
